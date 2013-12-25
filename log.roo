@@ -15,3 +15,20 @@ web mvc all --package ~.web
 security setup
 selenium test --controller ~.web.AppUserController
 perform package
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-12-25 19:09:37
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-12-26 02:33:09
+controller class --class ~.web.RemoteDesktopViewController --preferredMapping /remoteDesktopView
+json add --class ~.web.RemoteDesktopViewController --rootName
+entity jpa --class ~.modal.Client --testAutomatically
+field string --fieldName clientName --notNull true --sizeMin 2
+field string --fieldName streetAddress 
+field number --fieldName contactNumber --type java.lang.Integer --notNull 
+field string --fieldName URL
+web mvc controller --class ~.modal.Client
+entity jpa --class ~.modal.Client --testAutomatically
+field string --fieldName clientName --notNull true --sizeMin 2
+field string --fieldName streetAddress 
+field number --fieldName contactNumber --type java.lang.Integer --notNull
+field string --fieldName URL
+web mvc all --package com.systems.dhruva.web
+controller class --class ~.web.FileUploadController --preferredMapping /fileUpload

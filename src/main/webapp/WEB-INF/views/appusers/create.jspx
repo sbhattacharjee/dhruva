@@ -7,7 +7,7 @@
         <field:input field="lastName" id="c_com_systems_dhruva_modal_AppUser_lastName" min="2" required="true" z="1+vubWwrtVr4EdYObbUZ7HXmD30="/>
         <field:input field="empId" id="c_com_systems_dhruva_modal_AppUser_empId" required="true" z="5N9AwLazhkDLS13s95tVtEzXjoQ="/>
         <field:input field="dept" id="c_com_systems_dhruva_modal_AppUser_dept" z="MLqGBreVqhry9EyeC+EUOKHh3iY="/>
-        <field:input field="emailId" id="c_com_systems_dhruva_modal_AppUser_emailId" validationMessageCode="field_invalid_email" z="G5WQnTodDhb6JJb6Mv7ttcZ7tEs="/>
+        <field:input field="emailId" id="c_com_systems_dhruva_modal_AppUser_emailId" required="true" validationMessageCode="field_invalid_email" z="Mgbgs66PMvqYusTDAfgYZnLMNKk="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_systems_dhruva_modal_AppUser" render="${not empty dependencies}" z="zz3/pFN7Ve6ZnL/1JKpHaFk6RJI="/>
 </div>

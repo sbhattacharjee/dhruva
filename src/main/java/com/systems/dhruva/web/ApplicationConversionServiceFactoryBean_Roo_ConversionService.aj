@@ -4,6 +4,7 @@
 package com.systems.dhruva.web;
 
 import com.systems.dhruva.modal.AppUser;
+import com.systems.dhruva.modal.Client;
 import com.systems.dhruva.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -37,10 +38,37 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Client, String> ApplicationConversionServiceFactoryBean.getClientToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.systems.dhruva.modal.Client, java.lang.String>() {
+            public String convert(Client client) {
+                return new StringBuilder().append(client.getClientName()).append(' ').append(client.getStreetAddress()).append(' ').append(client.getContactNumber()).append(' ').append(client.getURL()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Client> ApplicationConversionServiceFactoryBean.getIdToClientConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.systems.dhruva.modal.Client>() {
+            public com.systems.dhruva.modal.Client convert(java.lang.Long id) {
+                return Client.findClient(id);
+            }
+        };
+    }
+    
+    public Converter<String, Client> ApplicationConversionServiceFactoryBean.getStringToClientConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.systems.dhruva.modal.Client>() {
+            public com.systems.dhruva.modal.Client convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Client.class);
+            }
+        };
+    }
+    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getAppUserToStringConverter());
         registry.addConverter(getIdToAppUserConverter());
         registry.addConverter(getStringToAppUserConverter());
+        registry.addConverter(getClientToStringConverter());
+        registry.addConverter(getIdToClientConverter());
+        registry.addConverter(getStringToClientConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {

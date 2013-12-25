@@ -1,0 +1,9 @@
+<aspectj>
+<aspects>
+<aspect name="com.systems.dhruva.modal.AppUserDataOnDemand_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.AppUserDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.systems.dhruva.modal.AppUserIntegrationTest_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.AppUserIntegrationTest_Roo_IntegrationTest"/>
+</aspects>
+</aspectj>
+

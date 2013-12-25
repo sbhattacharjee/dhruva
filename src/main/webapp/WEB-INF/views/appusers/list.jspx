@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_systems_dhruva_modal_AppUser" items="${appusers}" z="lVjU9BUuy38Wr226FEOR0ve9bvs=">
+        <table:table data="${appusers}" id="l_com_systems_dhruva_modal_AppUser" path="/appusers" z="M03iyP7rt/urYuMjDBG4qVy64y0=">
+            <table:column id="c_com_systems_dhruva_modal_AppUser_firstName" property="firstName" z="UI1lNbKM8ENOhSKs78ZkII/FQCE="/>
+            <table:column id="c_com_systems_dhruva_modal_AppUser_lastName" property="lastName" z="0t/1IZ3TfJTmJX+Ln/t0R5WdjJg="/>
+            <table:column id="c_com_systems_dhruva_modal_AppUser_empId" property="empId" z="53B97OlVYm0zGTlKEq2SiFxzYFU="/>
+            <table:column id="c_com_systems_dhruva_modal_AppUser_dept" property="dept" z="cZnPpXcc9dYOxOQ2UHNbgGKcdDA="/>
+            <table:column id="c_com_systems_dhruva_modal_AppUser_emailId" property="emailId" z="g2ClsEYEb6tuhItoBs9MaIAbzyQ="/>
+        </table:table>
+    </page:list>
+</div>

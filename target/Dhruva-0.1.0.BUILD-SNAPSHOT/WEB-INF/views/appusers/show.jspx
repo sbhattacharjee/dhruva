@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_systems_dhruva_modal_AppUser" object="${appuser}" path="/appusers" z="kn+9CS4uhV1SlUKRCS3+0tRRahk=">
+        <field:display field="firstName" id="s_com_systems_dhruva_modal_AppUser_firstName" object="${appuser}" z="7zhuYnRM7eoMctYB7Ua9v6RG6zU="/>
+        <field:display field="lastName" id="s_com_systems_dhruva_modal_AppUser_lastName" object="${appuser}" z="oGkPlAFkZNTPSzRA2SffKCEvTVc="/>
+        <field:display field="empId" id="s_com_systems_dhruva_modal_AppUser_empId" object="${appuser}" z="mYH3b2f5vK8XiMMrGNQRL+vf6a8="/>
+        <field:display field="dept" id="s_com_systems_dhruva_modal_AppUser_dept" object="${appuser}" z="yWSawl2nA6cayP3YIqC0dOeNlKw="/>
+    </page:show>
+</div>

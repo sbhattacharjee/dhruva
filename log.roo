@@ -1,0 +1,17 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-12-25 17:09:29
+project --topLevelPackage com.systems.dhruva --projectName Dhruva --java 6
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-12-25 17:09:30
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-12-25 17:09:35
+hint
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+entity jpa --class ~.modal.AppUser --testAutomatically 
+field string --fieldName firstName --notNull --sizeMin 2
+field string --fieldName lastName --notNull --sizeMin 2
+field string --fieldName empId --notNull 
+field string --fieldName dept
+perform tests
+web mvc setup
+web mvc all --package ~.web
+security setup
+selenium test --controller ~.web.AppUserController
+perform package

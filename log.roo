@@ -32,3 +32,6 @@ field number --fieldName contactNumber --type java.lang.Integer --notNull
 field string --fieldName URL
 web mvc all --package com.systems.dhruva.web
 controller class --class ~.web.FileUploadController --preferredMapping /fileUpload
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-12-26 04:13:37
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-12-27 01:12:00
+hint

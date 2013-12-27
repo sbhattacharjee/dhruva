@@ -1,1 +1,1 @@
-License
+Licenses

@@ -5,6 +5,7 @@ package com.systems.dhruva.web;
 
 import com.systems.dhruva.modal.AppUser;
 import com.systems.dhruva.modal.Client;
+import com.systems.dhruva.modal.FileUpload;
 import com.systems.dhruva.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -62,6 +63,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<FileUpload, String> ApplicationConversionServiceFactoryBean.getFileUploadToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.systems.dhruva.modal.FileUpload, java.lang.String>() {
+            public String convert(FileUpload fileUpload) {
+                return new StringBuilder().append(fileUpload.getFileName()).append(' ').append(fileUpload.getFileSize()).append(' ').append(fileUpload.getContentType()).append(' ').append(fileUpload.getContent()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, FileUpload> ApplicationConversionServiceFactoryBean.getIdToFileUploadConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.systems.dhruva.modal.FileUpload>() {
+            public com.systems.dhruva.modal.FileUpload convert(java.lang.Long id) {
+                return FileUpload.findFileUpload(id);
+            }
+        };
+    }
+    
+    public Converter<String, FileUpload> ApplicationConversionServiceFactoryBean.getStringToFileUploadConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.systems.dhruva.modal.FileUpload>() {
+            public com.systems.dhruva.modal.FileUpload convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), FileUpload.class);
+            }
+        };
+    }
+    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getAppUserToStringConverter());
         registry.addConverter(getIdToAppUserConverter());
@@ -69,6 +94,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getClientToStringConverter());
         registry.addConverter(getIdToClientConverter());
         registry.addConverter(getStringToClientConverter());
+        registry.addConverter(getFileUploadToStringConverter());
+        registry.addConverter(getIdToFileUploadConverter());
+        registry.addConverter(getStringToFileUploadConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {

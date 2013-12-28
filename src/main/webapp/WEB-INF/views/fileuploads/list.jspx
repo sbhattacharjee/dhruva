@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_systems_dhruva_modal_FileUpload" items="${fileuploads}" z="9bNi49wLgVbCpxL7uTQ02GaG2FE=">
+        <table:table data="${fileuploads}" id="l_com_systems_dhruva_modal_FileUpload" path="/fileuploads" update="false" z="WYsec1jdGqt9NcjVRtcvqsjteKY=">
+            <table:column id="c_com_systems_dhruva_modal_FileUpload_fileName" property="fileName" z="/8bYNrvPv3mZlEl+SJykDXX3AgQ="/>
+            <table:column id="c_com_systems_dhruva_modal_FileUpload_fileSize" property="fileSize" z="+uEXBfGAabLVH+pJ+ksmD9K1uYs="/>
+            <table:column id="c_com_systems_dhruva_modal_FileUpload_contentType" property="contentType" z="miMznkfnSsIGto54P7LnfTfH/DY="/>
+            <table:column id="c_com_systems_dhruva_modal_FileUpload_content" property="content" render="false" z="veBT9YONAq59sUZH6lAFbEo9qIk="/>
+        </table:table>
+    </page:list>
+</div>

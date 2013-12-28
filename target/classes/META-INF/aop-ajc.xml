@@ -1,19 +1,25 @@
 <aspectj>
 <aspects>
+<aspect name="com.systems.dhruva.web.FileUploadController_Roo_Controller"/>
 <aspect name="com.systems.dhruva.web.ClientController_Roo_Controller"/>
-<aspect name="com.systems.dhruva.modal.AppUser_Roo_Jpa_ActiveRecord"/>
 <aspect name="com.systems.dhruva.modal.Client_Roo_Jpa_ActiveRecord"/>
 <aspect name="com.systems.dhruva.modal.Client_Roo_ToString"/>
-<aspect name="com.systems.dhruva.modal.Client_Roo_Jpa_Entity"/>
 <aspect name="com.systems.dhruva.modal.Client_Roo_Configurable"/>
 <aspect name="com.systems.dhruva.modal.Client_Roo_JavaBean"/>
-<aspect name="com.systems.dhruva.modal.AppUser_Roo_ToString"/>
 <aspect name="com.systems.dhruva.modal.AppUser_Roo_Jpa_Entity"/>
+<aspect name="com.systems.dhruva.modal.FileUpload_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.FileUpload_Roo_JavaBean"/>
 <aspect name="com.systems.dhruva.web.AppUserController_Roo_Controller"/>
 <aspect name="com.systems.dhruva.modal.AppUser_Roo_Configurable"/>
-<aspect name="com.systems.dhruva.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
 <aspect name="com.systems.dhruva.web.RemoteDesktopViewController_Roo_Json"/>
 <aspect name="com.systems.dhruva.modal.AppUser_Roo_JavaBean"/>
+<aspect name="com.systems.dhruva.modal.AppUser_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.systems.dhruva.modal.Client_Roo_Jpa_Entity"/>
+<aspect name="com.systems.dhruva.modal.FileUpload_Roo_ToString"/>
+<aspect name="com.systems.dhruva.modal.AppUser_Roo_ToString"/>
+<aspect name="com.systems.dhruva.modal.FileUpload_Roo_Jpa_Entity"/>
+<aspect name="com.systems.dhruva.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
+<aspect name="com.systems.dhruva.modal.FileUpload_Roo_Jpa_ActiveRecord"/>
 </aspects>
 </aspectj>
 

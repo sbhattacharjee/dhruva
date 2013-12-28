@@ -35,3 +35,13 @@ controller class --class ~.web.FileUploadController --preferredMapping /fileUplo
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-12-26 04:13:37
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-12-27 01:12:00
 hint
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-12-27 01:27:04
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-12-27 22:33:56
+hint
+entity jpa --class ~.modal.FileUpload --testAutomatically 
+field string --fieldName fileName --notNull
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-12-28 01:59:04
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-12-28 18:23:03
+field number --type long --fieldName fileSize --notNull true --class ~.modal.FileUpload
+field string --fieldName contentType --notNull true
+web mvc all --package com.systems.dhruva.web

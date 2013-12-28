@@ -4,7 +4,8 @@
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
         <menu:category id="c_fileupload" z="user-managed">
-            <menu:item id="i_controller__fileuploadindex_id" messageCode="global_generic" url="/fileUpload" z="user-managed"/>
+            <menu:item id="i_fileupload_new" messageCode="label_com_systems_dhruva_fileupload" url="/fileuploads?form" z="tU2MzkKv1JYkTjGmlvJDWD9oqbs="/>
+            <menu:item id="i_fileupload_list" messageCode="global_menu_list" url="/fileuploads?page=1&amp;size=${empty param.size ? 10 : param.size}" z="e+tXoLgWj8y0XyIesueyPIlsitM="/>
         </menu:category>
         <menu:category id="c_remoteview" z="mzLBt4CbJTyZWnmKbPGvcWOhWgo=">
             <menu:item id="i_remote_view" messageCode="global_remote_view" url="/remoteDesktopView" z="user-managed"/>

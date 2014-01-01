@@ -6,6 +6,6 @@
         <field:display field="fileName" id="s_com_systems_dhruva_modal_FileUpload_fileName" object="${fileupload}" z="NKT9zRWl/lQPBn65i6BOUpykE1o="/>
         <field:display field="fileSize" id="s_com_systems_dhruva_modal_FileUpload_fileSize" object="${fileupload}" z="dImlJVEMWNMcRBouucgvVBAgb28="/>
         <field:display field="contentType" id="s_com_systems_dhruva_modal_FileUpload_contentType" object="${fileupload}" z="HZuDi5tSXV5Q712qWJpoYJlyNJs="/>
-        <field:display field="content" id="s_com_systems_dhruva_modal_FileUpload_content" object="${fileupload}" render="false" z="l/dUNd5ur8chTx9d1rxu9CcIkh4="/>
+        <field:display field="content" id="s_com_systems_dhruva_modal_FileUpload_content" object="${fileupload}" render="false" z="user-managed"/>
     </page:show>
 </div>

@@ -16,12 +16,20 @@ privileged aspect RemoteDesktopViewController_Roo_Json {
         return new JSONSerializer().exclude("*.class").serialize(this);
     }
     
+    public String RemoteDesktopViewController.toJson(String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(this);
+    }
+    
     public static RemoteDesktopViewController RemoteDesktopViewController.fromJsonToRemoteDesktopViewController(String json) {
         return new JSONDeserializer<RemoteDesktopViewController>().use(null, RemoteDesktopViewController.class).deserialize(json);
     }
     
     public static String RemoteDesktopViewController.toJsonArray(Collection<RemoteDesktopViewController> collection) {
         return new JSONSerializer().exclude("*.class").serialize(collection);
+    }
+    
+    public static String RemoteDesktopViewController.toJsonArray(Collection<RemoteDesktopViewController> collection, String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(collection);
     }
     
     public static Collection<RemoteDesktopViewController> RemoteDesktopViewController.fromJsonArrayToRemoteDesktopViewControllers(String json) {

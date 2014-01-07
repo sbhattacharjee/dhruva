@@ -5,6 +5,7 @@ package com.systems.dhruva.modal;
 
 import com.systems.dhruva.modal.FileUpload;
 import com.systems.dhruva.modal.FileUploadDataOnDemand;
+import java.io.File;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -27,6 +28,7 @@ privileged aspect FileUploadDataOnDemand_Roo_DataOnDemand {
         setContentType(obj, index);
         setFileName(obj, index);
         setFileSize(obj, index);
+        setFileUpload(obj, index);
         return obj;
     }
     
@@ -43,6 +45,11 @@ privileged aspect FileUploadDataOnDemand_Roo_DataOnDemand {
     public void FileUploadDataOnDemand.setFileSize(FileUpload obj, int index) {
         Long fileSize = new Integer(index).longValue();
         obj.setFileSize(fileSize);
+    }
+    
+    public void FileUploadDataOnDemand.setFileUpload(FileUpload obj, int index) {
+        File fileUpload = null;
+        obj.setFileUpload(fileUpload);
     }
     
     public FileUpload FileUploadDataOnDemand.getSpecificFileUpload(int index) {
@@ -85,13 +92,13 @@ privileged aspect FileUploadDataOnDemand_Roo_DataOnDemand {
             FileUpload obj = getNewTransientFileUpload(i);
             try {
                 obj.persist();
-            } catch (ConstraintViolationException e) {
-                StringBuilder msg = new StringBuilder();
+            } catch (final ConstraintViolationException e) {
+                final StringBuilder msg = new StringBuilder();
                 for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
-                    ConstraintViolation<?> cv = iter.next();
-                    msg.append("[").append(cv.getConstraintDescriptor()).append(":").append(cv.getMessage()).append("=").append(cv.getInvalidValue()).append("]");
+                    final ConstraintViolation<?> cv = iter.next();
+                    msg.append("[").append(cv.getRootBean().getClass().getName()).append(".").append(cv.getPropertyPath()).append(": ").append(cv.getMessage()).append(" (invalid value = ").append(cv.getInvalidValue()).append(")").append("]");
                 }
-                throw new RuntimeException(msg.toString(), e);
+                throw new IllegalStateException(msg.toString(), e);
             }
             obj.flush();
             data.add(obj);

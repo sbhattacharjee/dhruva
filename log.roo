@@ -53,3 +53,66 @@ interface --class ~.service.WebPageFacade --path SRC_MAIN_JAVA
 class --class ~.service.WebPageFacadeImpl --path SRC_MAIN_JAVA
 enum type --class ~.common.util.TestActionEnum --path SRC_MAIN_JAVA
 // Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-01-01 23:13:43
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-01-02 12:27:42
+class --class ~.service.component.TestSuite --abstract true
+// [failed] entity jpa --class ~.modal.TestAction --versionField rowId --testAutomatically true
+// [failed] entity jpa --class ~.modal.TestAction --testAutomatically true
+entity jpa --class ~.modal.ActionStep --testAutomatically true
+field enum --fieldName command --type ~.common.util.ActionStepEnum
+field string --fieldName command
+field string --fieldName selectorType
+field string --fieldName expectedResult
+field string --fieldName targetLocator
+field string --fieldName testResult 
+field string --fieldName errorMessage
+field string --fieldName errorDetails
+// [failed] entity jpa --class ~.modal.TestCase --testAutomatically true
+// [failed] entity jpa --class ~.modal.ActionTestCase --testAutomatically true
+// [failed] entity jpa --class ~.modal.TestActionCase --testAutomatically true
+entity jpa --class ~.modal.ActionCase --testAutomatically true
+field string --fieldName defectTool
+field string --fieldName reportedBy
+field string --fieldName assignedTo
+class --class ~.service.BrowserFacade --abstract 
+// [failed] field reference --fieldName browser --type ~.service.BrowserFacade
+// [failed] field reference --fieldName browser --type ~.service.BrowserFacade --class ~.modal.ActionCase
+// [failed] field reference --type ~.service.BrowserFacade --fieldName browser --class ~.modal.ActionCase
+field set --fieldName actionStepSet --type ~.modal.ActionStep
+class --class ~.service.TestSuiteFacadeImpl --extends ~.service.TestSuiteFacade --path SRC_MAIN_JAVA
+class --class ~.web.helper.ExcelUpload --extends AbstractExcelView --path SRC_MAIN_JAVA
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-01-02 14:37:36
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-01-02 17:51:49
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-01-02 18:54:25
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-01-02 22:43:09
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-01-02 22:58:42
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-01-06 16:33:33
+perform package 
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-01-06 16:54:20
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-01-06 18:39:50
+perform package
+perform package
+perform package
+perform package
+perform package
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-01-06 18:59:11
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-01-07 12:19:23
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-01-07 12:19:49
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-01-07 12:31:57
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-01-07 12:47:38
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-07 14:38:51
+perform package
+perform package
+perform package
+perform clean 
+perform package
+perform clean 
+perform clean
+perform package
+perform clean
+perform assembly 
+perform package
+perform clean 
+perform package
+perform clean 
+perform package
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-07 17:26:55

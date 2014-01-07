@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.systems.dhruva.modal.FileUpload;
+import com.systems.dhruva.service.TestSuiteFacade;
 
 @RequestMapping("/fileuploads")
 @Controller
@@ -25,6 +27,9 @@ public class FileUploadController {
 	private static final Logger log = Logger
 			.getLogger(FileUploadController.class);
 
+	@Autowired
+	private TestSuiteFacade testSuiteFacade;
+
 	@RequestMapping(method = RequestMethod.POST, produces = "text/html")
 	public String create(
 			@Valid FileUpload fileUpload,
@@ -32,7 +37,7 @@ public class FileUploadController {
 			@RequestParam("content") MultipartFile content,
 			HttpServletRequest httpServletRequest) {
 
-		log.debug("*******************************************************************************");
+		log.debug("********************************** UPLOADING FILE TO SERVER *********************************************");
 
 		File dest = new File( content.getOriginalFilename());
 		try {
@@ -40,7 +45,11 @@ public class FileUploadController {
 			fileUpload.setFileSize(content.getSize());
 			fileUpload.setFileName(dest.getName());
 			fileUpload.setContentType(content.getContentType());
-			log.debug(" ********************************** filename ==> "+fileUpload.getFileName());
+			fileUpload.setFileUpload(dest);
+
+			testSuiteFacade.buildTestSuite(fileUpload);
+
+			log.debug("filename ==> "+fileUpload.getFileName());
 		} catch (Exception e) {
 			log.error(e);
 			e.printStackTrace();
@@ -49,6 +58,9 @@ public class FileUploadController {
 
 		uiModel.asMap().clear();
 		fileUpload.persist();
+
+		log.debug("******************************************* *END OF UPLOAD **************************************************************");
+
 		return "redirect:/fileuploads/"
 				+ encodeUrlPathSegment(fileUpload.getId().toString(),
 						httpServletRequest);

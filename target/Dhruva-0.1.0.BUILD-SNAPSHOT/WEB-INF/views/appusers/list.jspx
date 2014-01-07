@@ -8,6 +8,7 @@
             <table:column id="c_com_systems_dhruva_modal_AppUser_lastName" property="lastName" z="0t/1IZ3TfJTmJX+Ln/t0R5WdjJg="/>
             <table:column id="c_com_systems_dhruva_modal_AppUser_empId" property="empId" z="53B97OlVYm0zGTlKEq2SiFxzYFU="/>
             <table:column id="c_com_systems_dhruva_modal_AppUser_dept" property="dept" z="cZnPpXcc9dYOxOQ2UHNbgGKcdDA="/>
+            <table:column id="c_com_systems_dhruva_modal_AppUser_emailId" property="emailId" z="g2ClsEYEb6tuhItoBs9MaIAbzyQ="/>
         </table:table>
     </page:list>
 </div>

@@ -66,7 +66,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<FileUpload, String> ApplicationConversionServiceFactoryBean.getFileUploadToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.systems.dhruva.modal.FileUpload, java.lang.String>() {
             public String convert(FileUpload fileUpload) {
-                return new StringBuilder().append(fileUpload.getFileName()).append(' ').append(fileUpload.getFileSize()).append(' ').append(fileUpload.getContentType()).append(' ').append(fileUpload.getContent()).toString();
+                return new StringBuilder().append(fileUpload.getFileName()).append(' ').append(fileUpload.getFileSize()).append(' ').append(fileUpload.getContentType()).append(' ').append(fileUpload.getFileUpload()).toString();
             }
         };
     }

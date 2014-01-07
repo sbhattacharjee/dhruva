@@ -19,7 +19,7 @@
 	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:util="http://www.springframework.org/schema/util">
 
-
+	<context:annotation-config/>
 
 	<bean id="multipartFilter"
 		class="org.springframework.web.multipart.support.MultipartFilter">
@@ -33,8 +33,15 @@
 		<property name="maxUploadSize" value="100000" />
 
 	</bean>
+	
+	<bean id="testSuiteFacade"
+		class="com.systems.dhruva.service.TestSuiteFacadeImpl"/>
 
-	<bean id="firefoxDriver" class="org.openqa.selenium.firefox.FirefoxDriver"
-		destroy-method="quit" />
+	<!-- <bean id="firefoxDriver" class="org.openqa.selenium.firefox.FirefoxDriver"
+		destroy-method="quit" /> -->
 
+	<bean id="actionCase" class="com.systems.dhruva.modal.ActionCase" />
+	
+	<bean id="actionStep" class="com.systems.dhruva.modal.ActionStep" />
+	
 </beans>

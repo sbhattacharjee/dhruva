@@ -4,7 +4,7 @@
 package com.systems.dhruva.modal;
 
 import com.systems.dhruva.modal.FileUpload;
-import org.springframework.web.multipart.MultipartFile;
+import java.io.File;
 
 privileged aspect FileUpload_Roo_JavaBean {
     
@@ -32,12 +32,12 @@ privileged aspect FileUpload_Roo_JavaBean {
         this.contentType = contentType;
     }
     
-    public MultipartFile FileUpload.getContent() {
-        return this.content;
+    public File FileUpload.getFileUpload() {
+        return this.fileUpload;
     }
     
-    public void FileUpload.setContent(MultipartFile content) {
-        this.content = content;
+    public void FileUpload.setFileUpload(File fileUpload) {
+        this.fileUpload = fileUpload;
     }
     
 }

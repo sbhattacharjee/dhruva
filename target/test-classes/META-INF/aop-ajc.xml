@@ -1,17 +1,25 @@
 <aspectj>
 <aspects>
 <aspect name="com.systems.dhruva.modal.ClientIntegrationTest_Roo_IntegrationTest"/>
-<aspect name="com.systems.dhruva.modal.ClientDataOnDemand_Roo_DataOnDemand"/>
-<aspect name="com.systems.dhruva.modal.AppUserIntegrationTest_Roo_IntegrationTest"/>
-<aspect name="com.systems.dhruva.modal.FileUploadDataOnDemand_Roo_DataOnDemand"/>
-<aspect name="com.systems.dhruva.modal.AppUserDataOnDemand_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.ActionCaseIntegrationTest_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.ActionCaseIntegrationTest_Roo_IntegrationTest"/>
 <aspect name="com.systems.dhruva.modal.ClientIntegrationTest_Roo_Configurable"/>
 <aspect name="com.systems.dhruva.modal.FileUploadIntegrationTest_Roo_IntegrationTest"/>
 <aspect name="com.systems.dhruva.modal.ClientDataOnDemand_Roo_Configurable"/>
-<aspect name="com.systems.dhruva.modal.FileUploadIntegrationTest_Roo_Configurable"/>
-<aspect name="com.systems.dhruva.modal.FileUploadDataOnDemand_Roo_Configurable"/>
 <aspect name="com.systems.dhruva.modal.AppUserDataOnDemand_Roo_DataOnDemand"/>
 <aspect name="com.systems.dhruva.modal.AppUserIntegrationTest_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.ActionStepDataOnDemand_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.ActionStepDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.systems.dhruva.modal.ClientDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.systems.dhruva.modal.ActionCaseDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.systems.dhruva.modal.AppUserIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.systems.dhruva.modal.ActionStepIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.systems.dhruva.modal.FileUploadDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.systems.dhruva.modal.AppUserDataOnDemand_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.ActionCaseDataOnDemand_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.ActionStepIntegrationTest_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.FileUploadIntegrationTest_Roo_Configurable"/>
+<aspect name="com.systems.dhruva.modal.FileUploadDataOnDemand_Roo_Configurable"/>
 </aspects>
 </aspectj>
 

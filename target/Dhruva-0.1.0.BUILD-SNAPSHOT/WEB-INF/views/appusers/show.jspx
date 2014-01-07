@@ -7,5 +7,6 @@
         <field:display field="lastName" id="s_com_systems_dhruva_modal_AppUser_lastName" object="${appuser}" z="oGkPlAFkZNTPSzRA2SffKCEvTVc="/>
         <field:display field="empId" id="s_com_systems_dhruva_modal_AppUser_empId" object="${appuser}" z="mYH3b2f5vK8XiMMrGNQRL+vf6a8="/>
         <field:display field="dept" id="s_com_systems_dhruva_modal_AppUser_dept" object="${appuser}" z="yWSawl2nA6cayP3YIqC0dOeNlKw="/>
+        <field:display field="emailId" id="s_com_systems_dhruva_modal_AppUser_emailId" object="${appuser}" z="83MKXuLh903/eulFjPg5RqFla4I="/>
     </page:show>
 </div>

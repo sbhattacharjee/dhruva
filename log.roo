@@ -116,3 +116,44 @@ perform package
 perform clean 
 perform package
 // Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-07 17:26:55
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-07 18:47:01
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-09 21:53:18
+perform command --mavenCommand eclipse:clean
+perform command --mavenCommand eclipse:eclipse
+perform command --mavenCommand eclipse:clean
+perform command --mavenCommand eclipse:eclipse
+perform command --mavenCommand eclipse:clean
+perform package
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-09 23:53:59
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-10 16:27:58
+perform command --mavenCommand eclipse:clean
+perform command --mavenCommand eclipse:eclipse
+perform package
+perform command --mavenCommand eclipse:clean
+perform command --mavenCommand eclipse:eclipse
+perform command --mavenCommand eclipse:clean
+perform command --mavenCommand eclipse:clean
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-10 20:11:40
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-11 07:11:51
+perform command --mavenCommand eclipse:eclipse
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-11 15:49:46
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-14 15:52:48
+perform command --mavenCommand eclipse:eclipse
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-14 15:55:33
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-14 17:38:29
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-14 17:56:15
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-14 18:43:56
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-14 18:52:52
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log opened at 2014-01-16 16:57:17
+perform package
+perform command --mavenCommand eclipse:eclipse
+perform command --mavenCommand eclipse:clean
+perform command --mavenCommand eclipse:eclipse
+perform command --mavenCommand eclipse:clean
+perform command --mavenCommand eclipse:clean
+perform command --mavenCommand eclipse:eclipse
+perform command --mavenCommand eclipse:eclipse
+perform command --mavenCommand eclipse:clean
+perform command --mavenCommand eclipse:eclipse
+perform command --mavenCommand eclipse:clean
+perform command --mavenCommand eclipse:eclipse

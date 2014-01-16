@@ -157,3 +157,4 @@ perform command --mavenCommand eclipse:clean
 perform command --mavenCommand eclipse:eclipse
 perform command --mavenCommand eclipse:clean
 perform command --mavenCommand eclipse:eclipse
+// Spring Roo 1.2.4.RELEASE [rev 75337cf] log closed at 2014-01-16 18:56:31

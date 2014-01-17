@@ -40,4 +40,12 @@ privileged aspect FileUpload_Roo_JavaBean {
         this.fileUpload = fileUpload;
     }
     
+    public byte[] FileUpload.getContent() {
+        return this.content;
+    }
+    
+    public void FileUpload.setContent(byte[] content) {
+        this.content = content;
+    }
+    
 }

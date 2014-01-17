@@ -19,7 +19,7 @@ public class TestSuiteFacadeImpl implements TestSuiteFacade {
 	private static final Logger log = Logger
 			.getLogger(TestSuiteFacadeImpl.class);
 
-	@Autowired
+	/*@Autowired
 	private Collection<ActionCase> testCaseColl;
 
 	public Collection<ActionCase> getTestCaseColl() {
@@ -29,13 +29,13 @@ public class TestSuiteFacadeImpl implements TestSuiteFacade {
 	public void setTestCaseColl(Collection<ActionCase> testCaseColl) {
 		this.testCaseColl = testCaseColl;
 	}
-
+*/
 	@Override
 	public boolean buildTestSuite(FileUpload fileUpload) throws Exception {
 
 		log.debug("***************************  Start: buildTestSuite ********************");
 
-		log.debug(fileUpload.getFileName());
+//		log.debug(fileUpload.getFileName());
 
 		log.debug("*********************************** End: buildTestSuite ********************************");
 

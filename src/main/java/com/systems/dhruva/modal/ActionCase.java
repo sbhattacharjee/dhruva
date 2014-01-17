@@ -17,6 +17,6 @@ public class ActionCase {
 
     private String browser;
 
-    private ActionStep[] actionStep;
+//    private ActionStep[] actionStep;
 
 }

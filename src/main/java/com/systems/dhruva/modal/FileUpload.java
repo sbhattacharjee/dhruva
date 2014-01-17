@@ -19,4 +19,6 @@ public class FileUpload {
     private String contentType;
 
     private File fileUpload;
+    
+    private byte[] content;
 }

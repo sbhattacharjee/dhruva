@@ -5,7 +5,6 @@ package com.systems.dhruva.modal;
 
 import com.systems.dhruva.modal.ActionCase;
 import com.systems.dhruva.modal.ActionCaseDataOnDemand;
-import com.systems.dhruva.modal.ActionStep;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -25,17 +24,11 @@ privileged aspect ActionCaseDataOnDemand_Roo_DataOnDemand {
     
     public ActionCase ActionCaseDataOnDemand.getNewTransientActionCase(int index) {
         ActionCase obj = new ActionCase();
-        setActionStep(obj, index);
         setAssignedTo(obj, index);
         setBrowser(obj, index);
         setDefectTool(obj, index);
         setReportedBy(obj, index);
         return obj;
-    }
-    
-    public void ActionCaseDataOnDemand.setActionStep(ActionCase obj, int index) {
-        ActionStep[] actionStep = null;
-        obj.setActionStep(actionStep);
     }
     
     public void ActionCaseDataOnDemand.setAssignedTo(ActionCase obj, int index) {

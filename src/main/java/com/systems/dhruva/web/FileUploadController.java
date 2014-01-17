@@ -27,9 +27,10 @@ public class FileUploadController {
 	private static final Logger log = Logger
 			.getLogger(FileUploadController.class);
 
-	@Autowired
+	/*@Autowired
 	private TestSuiteFacade testSuiteFacade;
-
+*/
+	
 	@RequestMapping(method = RequestMethod.POST, produces = "text/html")
 	public String create(
 			@Valid FileUpload fileUpload,
@@ -47,7 +48,7 @@ public class FileUploadController {
 			fileUpload.setContentType(content.getContentType());
 			fileUpload.setFileUpload(dest);
 
-			testSuiteFacade.buildTestSuite(fileUpload);
+//			testSuiteFacade.buildTestSuite(fileUpload);
 
 			log.debug("filename ==> "+fileUpload.getFileName());
 		} catch (Exception e) {

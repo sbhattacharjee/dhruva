@@ -25,11 +25,17 @@ privileged aspect FileUploadDataOnDemand_Roo_DataOnDemand {
     
     public FileUpload FileUploadDataOnDemand.getNewTransientFileUpload(int index) {
         FileUpload obj = new FileUpload();
+        setContent(obj, index);
         setContentType(obj, index);
         setFileName(obj, index);
         setFileSize(obj, index);
         setFileUpload(obj, index);
         return obj;
+    }
+    
+    public void FileUploadDataOnDemand.setContent(FileUpload obj, int index) {
+        byte[] content = String.valueOf(index).getBytes();
+        obj.setContent(content);
     }
     
     public void FileUploadDataOnDemand.setContentType(FileUpload obj, int index) {

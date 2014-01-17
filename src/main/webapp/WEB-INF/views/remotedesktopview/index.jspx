@@ -13,8 +13,8 @@
 		<br></br>
 		<spring:url value="remoteDesktopView/1" var="rdp" />
 		<center>
-			<span> <a href="${rdp}">
-			 	<spring:message code="open_remote_desktop_view" />
+			<span> <a href="${rdp}"> <spring:message
+						code="open_remote_desktop_view" />
 			</a>
 			</span>
 		</center>

@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
-    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-    <jsp:output omit-xml-declaration="yes"/>
-    <page:list id="pl_com_systems_dhruva_modal_Client" items="${clients}" z="OZpG1jf0qJnQeCnPh5JYGe/Asxo=">
-        <table:table data="${clients}" id="l_com_systems_dhruva_modal_Client" path="/clients" z="kWdptgV08Fx3Nprz7JWa+qxEVf8=">
-            <table:column id="c_com_systems_dhruva_modal_Client_clientName" property="clientName" z="Sb5VWnxKgw2LwdsvWywjhczPemM="/>
-            <table:column id="c_com_systems_dhruva_modal_Client_streetAddress" property="streetAddress" z="jyuPAaUWNGhVEql/DwabI9WsQEU="/>
-            <table:column id="c_com_systems_dhruva_modal_Client_contactNumber" property="contactNumber" z="D+M6bl9ZOEIWKaoZ1thPO6Kfgyk="/>
-            <table:column id="c_com_systems_dhruva_modal_Client_URL" property="URL" z="Fv4MCY/tmQtLaPmpVEpJX6kwdmM="/>
-        </table:table>
-    </page:list>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+	xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<page:list id="pl_com_systems_dhruva_modal_Client" items="${clients}"
+		z="OZpG1jf0qJnQeCnPh5JYGe/Asxo=">
+		<table:table data="${clients}" id="l_com_systems_dhruva_modal_Client"
+			path="/clients" z="kWdptgV08Fx3Nprz7JWa+qxEVf8=">
+			<table:column id="c_com_systems_dhruva_modal_Client_clientName"
+				property="clientName" z="Sb5VWnxKgw2LwdsvWywjhczPemM=" />
+			<table:column id="c_com_systems_dhruva_modal_Client_streetAddress"
+				property="streetAddress" z="jyuPAaUWNGhVEql/DwabI9WsQEU=" />
+			<table:column id="c_com_systems_dhruva_modal_Client_contactNumber"
+				property="contactNumber" z="D+M6bl9ZOEIWKaoZ1thPO6Kfgyk=" />
+			<table:column id="c_com_systems_dhruva_modal_Client_URL"
+				property="URL" z="Fv4MCY/tmQtLaPmpVEpJX6kwdmM=" />
+		</table:table>
+	</page:list>
 </div>

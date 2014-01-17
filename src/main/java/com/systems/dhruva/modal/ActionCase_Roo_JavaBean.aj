@@ -4,7 +4,6 @@
 package com.systems.dhruva.modal;
 
 import com.systems.dhruva.modal.ActionCase;
-import com.systems.dhruva.modal.ActionStep;
 
 privileged aspect ActionCase_Roo_JavaBean {
     
@@ -38,14 +37,6 @@ privileged aspect ActionCase_Roo_JavaBean {
     
     public void ActionCase.setBrowser(String browser) {
         this.browser = browser;
-    }
-    
-    public ActionStep[] ActionCase.getActionStep() {
-        return this.actionStep;
-    }
-    
-    public void ActionCase.setActionStep(ActionStep[] actionStep) {
-        this.actionStep = actionStep;
     }
     
 }

@@ -1,8 +1,9 @@
 package com.systems.dhruva.service;
 
+import java.io.File;
+
 import org.springframework.stereotype.Service;
 
-import com.systems.dhruva.modal.FileUpload;
 
 /**
  * Abstract class to be implemented by different file upload classes.
@@ -15,6 +16,6 @@ import com.systems.dhruva.modal.FileUpload;
  */
 @Service
 public interface TestSuiteFacade {
-
-	public boolean buildTestSuite(FileUpload fileUpload) throws Exception;
+	
+	public boolean buildTestSuite(File fileUpload) throws Exception;
 }

@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.systems.dhruva.common.util.ApplicationUtil;
 import com.systems.dhruva.modal.FileUpload;
+import com.systems.dhruva.service.FileUploadFacade;
 import com.systems.dhruva.service.TestSuiteFacade;
 
 @RequestMapping("/fileuploads")
@@ -27,10 +29,6 @@ public class FileUploadController {
 	private static final Logger log = Logger
 			.getLogger(FileUploadController.class);
 
-	@Autowired
-	private TestSuiteFacade testSuiteFacade;
-
-	
 	@RequestMapping(method = RequestMethod.POST, produces = "text/html")
 	public String create(
 			@Valid FileUpload fileUpload,
@@ -48,23 +46,48 @@ public class FileUploadController {
 			fileUpload.setContentType(content.getContentType());
 			fileUpload.setFileUpload(dest);
 			
-			testSuiteFacade.buildTestSuite(fileUpload);
-
 			log.debug("filename ==> "+fileUpload.getFileName());
+			
+			this.buidTestSuite(fileUpload);
+			
 		} catch (Exception e) {
-			log.error(e);
-			e.printStackTrace();
+			log.error("***************************	"+e.getMessage()+" :: "+e.fillInStackTrace());
+//			e.printStackTrace();
 			return "fileuploads/create";
 		}
 
 		uiModel.asMap().clear();
 		fileUpload.persist();
 
-		log.debug("******************************************* *END OF UPLOAD **************************************************************");
+		log.debug("******************************************* END OF UPLOAD **************************************************************");
 
 		return "redirect:/fileuploads/"
 				+ encodeUrlPathSegment(fileUpload.getId().toString(),
 						httpServletRequest);
 
+	}
+
+	@Autowired
+	private FileUploadFacade fileUploadFacade;
+	
+	private void buidTestSuite(FileUpload fileUpload) throws Exception {
+		
+		log.debug("************************** Method: buidTestSuite ***********");
+		String fileExtn = ApplicationUtil.getFileExtn(fileUpload.getFileName());
+
+		try{
+			TestSuiteFacade testSuiteFacade = fileUploadFacade.getTestSuite(fileExtn);
+			
+			if( testSuiteFacade != null ){
+				testSuiteFacade.buildTestSuite(fileUpload.getFileUpload());
+			}
+		}
+		catch(Exception exp){
+			log.error("Error in building test suite ..."+exp.getMessage());
+			throw exp;
+		}
+		
+		
+		log.debug("************************* End: buidTestSuite ******************************");
 	}
 }

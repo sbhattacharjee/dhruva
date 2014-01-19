@@ -13,10 +13,10 @@ public class ActionStep {
 
     private String selectorType;
 
-    private String expectedResult;
-
     private String targetLocator;
 
+    private String assertValue;
+    
     private String testResult;
 
     private String errorMessage;

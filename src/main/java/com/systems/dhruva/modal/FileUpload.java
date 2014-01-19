@@ -3,6 +3,8 @@ package com.systems.dhruva.modal;
 
 import java.io.File;
 
+import javax.persistence.Transient;
+
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
@@ -20,5 +22,6 @@ public class FileUpload {
 
     private File fileUpload;
     
+    @Transient
     private byte[] content;
 }

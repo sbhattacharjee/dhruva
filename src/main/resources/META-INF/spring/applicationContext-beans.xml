@@ -27,10 +27,9 @@
 	</bean>
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-	<!-- 	one of the properties available; the maximum file size in bytes -->
+		<!-- one of the properties available; the maximum file size in bytes -->
 		<property name="maxUploadSize" value="100000" />
 	</bean>
-	<bean id="testSuiteFacade" class="com.systems.dhruva.service.TestSuiteFacadeImpl" />
 
 	<!-- <bean id="firefoxDriver" class="org.openqa.selenium.firefox.FirefoxDriver" 
 		destroy-method="quit" /> -->
@@ -38,4 +37,24 @@
 	<!-- <bean id="actionCase" class="com.systems.dhruva.modal.ActionCase" /> 
 		<bean id="actionStep" class="com.systems.dhruva.modal.ActionStep" /> -->
 
+
+	<context:component-scan base-package="com.systems.dhruva.service" />
+
+	<bean
+		class="org.springframework.beans.factory.config.ServiceLocatorFactoryBean"
+		id="fileUploadFacade">
+		<property name="serviceLocatorInterface" value="com.systems.dhruva.service.FileUploadFacade" />
+	</bean>
+
+	<alias alias="XLS" name="XLS" />
+	<alias alias="XLSX" name="XLSX" />
+	<alias alias="CSV" name="CSV" />
+	<alias alias="TSV" name="TSV" />
+	<alias alias="XML" name="XML" />
+
+	<bean id="actionCase" class="com.systems.dhruva.modal.ActionCase"/>
+	
+	<bean id="actionStep" class="com.systems.dhruva.modal.ActionStep"/>
+
+	
 </beans>
